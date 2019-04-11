@@ -101,8 +101,9 @@ public class MainTestChapter3 {
 		// Stringbuilder
 
 		StringBuilder alpha = new StringBuilder();
-		for (char current = 'a'; current <= 'z'; current++)
+		for (char current = 'a'; current <= 'z'; current++) {
 			alpha.append(current);
+		}
 		System.out.println(alpha);
 
 		// stringbuilder referans
@@ -123,7 +124,7 @@ public class MainTestChapter3 {
 		System.out.println(sub + " " + len + " " + ch);
 
 		StringBuilder sb1 = new StringBuilder().append(1).append('c'); // birden fazla atama işlemi yapılabilir
-		sb1.append("-").append(true);
+		sb1 = sb1.append("-").append(true);
 		System.out.println(sb1); // 1c-true
 
 		StringBuilder sb2 = new StringBuilder("animals"); // verilen indexe bir karakter ekle
@@ -188,21 +189,26 @@ public class MainTestChapter3 {
 
 		int[] numbers = new int[10]; // 0-9 arasında indexler için
 		for (int i = 0; i < numbers.length; i++)
+		 {
 			numbers[i] = i + 5;
 		// numbers[10] = 3; //10. index yok
 		// numbers[numbers.length] = 5; //number.lenght=10 index yok
 		// for (int i = 0; i <= numbers.length; i++) numbers[i] = i + 5; //uzunluk her
 		// zaman dizi sayısından bir fazladır.
+		}
 
 		int[] numberss = { 6, 9, 1 };
 		Arrays.sort(numberss);
-		for (int i = 0; i < numberss.length; i++)
+		for (int i = 0; i < numberss.length; i++) {
 			System.out.print(numberss[i] + " ");
+		}
 
 		String[] stringss = { "10", "9", "100" }; // harf sıralamasına gore sıralar
 		Arrays.sort(stringss);
 		for (String str : stringss)
+		 {
 			System.out.print(str + " "); // 10 100 9
+		}
 
 		int[] num = { 2, 4, 6, 8 };
 		System.out.println(Arrays.binarySearch(num, 2)); // 0
@@ -233,13 +239,16 @@ public class MainTestChapter3 {
 		int[][] twoD = new int[3][2];
 		for (int i = 0; i < twoD.length; i++) {
 			for (int j = 0; j < twoD[i].length; j++)
+			 {
 				System.out.print(twoD[i][j] + " "); // print element
+			}
 			System.out.println(); // time for a new row
 		}
 
 		for (int[] inner : twoD) { // AYNI İŞLEMİ YAPAR DAHA AZ KARMAŞIK
-			for (int num3 : inner)
+			for (int num3 : inner) {
 				System.out.print(num3 + " ");
+			}
 			System.out.println();
 
 		}
